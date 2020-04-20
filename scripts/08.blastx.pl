@@ -47,12 +47,13 @@ $collapsedmerged=~s/\.m8/\.merged\.m8/;
 open(outmet,">>$methodsfile") || warn "Cannot open methods file $methodsfile for writing methods and references\n";
 open(outsyslog,">>$syslogfile") || warn "Cannot open syslog file $syslogfile for writing the program log\n";
 
-moving();
-masking();
-blocksize();
-run_blastx();
+#moving();
+#masking();
+#blocksize();
+#run_blastx();
 collapse();
 merge();
+die;
 getseqs();
 lca();
 functions();
