@@ -546,6 +546,7 @@ sub remakegff {
 			if($inframe{$orf}<0) { $direction="-"; } 
 			elsif($inframe{$orf}>=0) { $direction="+"; }
 			else { $direction="?"; }
+			print "$orf $inframe{$orf} $direction\n" if $verbose; 		
 			print outfile6 "$contname\tDiamond Blastx\tCDS\t$poinit\t$poend\t?\t$direction\t?\tID=$orf;\n";
 			}
 	
